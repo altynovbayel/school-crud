@@ -1,0 +1,43 @@
+.navbar{
+  background-color: #040c0e;
+  .container{
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 10px;
+    .nav{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      h1{
+        color: #5B019F;
+        @media (max-width: 425px){
+          font-size: 20px;
+        }
+      }
+      .nav_btns{
+        a{
+          text-decoration: none;
+          border-radius: 10px;
+          padding: 5px;
+          margin: 0 15px;
+          color: white;
+          font-size: 18px;
+        }
+        .active{
+          background-color: #1b3239;
+          color: white;
+        }
+      }
+      .btn{
+        padding: 12px 16px;
+        border-radius: 20px;
+        font-size: 16px;
+        @media (max-width: 425px) {
+          padding: 7px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

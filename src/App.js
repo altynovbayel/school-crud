@@ -1,25 +1,15 @@
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
+import AuthRoutes from "./pages/AuthRoutes";
+import LayoutRoutes from "./pages/LayoutRoutes";
+import {useAuth} from "./providers/useAuth";
+import axios from "axios";
+
+axios.defaults.baseURL = 'https://school-crud-afc34-default-rtdb.asia-southeast1.firebasedatabase.app'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const {users} = useAuth()
+  return users ? <LayoutRoutes/> : <AuthRoutes/>
 }
 
 export default App;

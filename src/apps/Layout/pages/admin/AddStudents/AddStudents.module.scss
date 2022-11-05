@@ -1,0 +1,36 @@
+.container{
+  min-height: 100vh;
+  background-color: #a19c9c;
+  padding: 50px 0 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .form{
+    width: 500px;
+    min-height: 400px;
+    background-color: #eed6d6;
+    border-radius: 20px;
+    padding: 10px;
+    @media (max-width: 425px) {
+      width: 300px;
+    }
+    .all_inputs{
+      display: flex;
+      justify-content: center;
+      .form_inputs{
+        width: 80%;
+
+      }
+    }
+    .btn{
+      text-align: center;
+      button{
+        padding: 10px 12px;
+        border-radius: 10px;
+        background-color: #1b3239;
+        font-size: 18px;
+        color: white;
+      }
+    }
+  }
+}

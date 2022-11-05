@@ -1,0 +1,32 @@
+.inputs_block{
+  margin-bottom: 15px;
+  .label{
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .input{
+    position: relative;
+    width: 100%;
+    .error_text{
+      color: red;
+      position: absolute;
+      right: 0;
+      top: -20px;
+      @media (max-width: 768px) {
+        font-size: 12px;
+      }
+      @media (max-width: 425px) {
+        top: 37px;
+      }
+    }
+    .errorInp{
+      border: 1px solid red;
+    }
+    input{
+      padding: 10px 5px;
+      width: 100%;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+  }
+}
