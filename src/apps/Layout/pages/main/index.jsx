@@ -8,8 +8,8 @@ import {Link} from "react-router-dom";
 
 
 function Main() {
-  const [data,setData] = React.useState(null)
-  const [base,setBase] = React.useState(null)
+  const [data,setData] = React.useState('')
+  const [base,setBase] = React.useState('')
   const {users} = useAuth()
   
   function getData(){
@@ -29,8 +29,8 @@ function Main() {
     getData()
   },[users.id])
   
+  if (data.length === 0) return <div className={c.btn}><Link to={'/admin/add'}>Добавить ученика</Link></div>
   if(!data) return <h1 style={{textAlign: 'center'}}>loading...</h1>
-  if (data.length === 0) return <div><Link to={'/admin/add'}>Добавить ученика</Link></div>
   return (
     <div className={c.container}>
       <Sort base={base} setData={setData}/>

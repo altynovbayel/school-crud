@@ -25,7 +25,7 @@ function Card({name, lastName, age, group, grade, url, id, get, data}) {
             Возраст: {age}
           </p>
           <div className={c.schoolInfo}>
-            <p>Группа: {group}</p>
+            <p>Группа: {group.toUpperCase()}</p>
             <p>Класс: {grade}</p>
           </div>
           <div className={c.editBtn}>

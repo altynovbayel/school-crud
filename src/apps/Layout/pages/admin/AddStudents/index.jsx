@@ -16,7 +16,7 @@ function AddStudents() {
     handleSubmit,
     formState: {isValid, errors}
   } = useForm({
-    mode: 'onBlur'
+    mode: 'onChange'
   })
   
   
@@ -30,9 +30,9 @@ function AddStudents() {
         <div className={c.all_inputs}>
           <div className={c.form_inputs}>
             <FormInput
-              inputText={'Photo'}
+              inputText={'Фото'}
               inputType={'text'}
-              placeholder={'Url img'}
+              placeholder={'Ссылку на фото'}
               register={register}
               registerName={'url'}
               errors={errors.url}
@@ -96,7 +96,7 @@ function AddStudents() {
           </div>
         </div>
         <div className={c.btn}>
-          <button type={"submit"} disabled={!isValid} >Добавить</button>
+          <button type={"submit"} >Добавить</button>
         </div>
       </form>
     </div>
